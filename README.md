@@ -6,6 +6,8 @@
 [![Privacy](https://img.shields.io/badge/Prywatno%C5%9B%C4%87-100%25_Lokalnie-orange.svg)]()
 
 > Gotowy, modularny szablon łączący Twój lokalny sejf notatek **Obsidian** z autonomicznym **Agentem AI** (np. Antigravity, Claude Code, Cursor, Windsurf) i dowolnym wybranym modelem.
+>
+> ✅ Przetestowane w **Antigravity** na modelu **Gemini Flash 3.8** oraz w **OpenCode** na modelu **MiMo-V2.6-Flash Free**.
 
 ---
 
