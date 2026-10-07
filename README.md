@@ -71,10 +71,13 @@ git clone https://github.com/Dawe1600/obsidian-ai-starter.git
 W folderze `.agents/scripts/` znajduje się gotowy skrypt w czystym standardowym Pythonie 3 (zero zewnętrznych instalacji `pip`):
 * `daily_note.py` — automatycznie tworzy nową notatkę dzienną w `sejf/Daily Notes/YYYY-MM-DD.md` i zaciąga aktywne zadania z pliku `sejf/Zadania/Zadania.md`.
 
-Uruchomienie:
+Uruchomienie w terminalu:
 ```bash
 python .agents/scripts/daily_note.py
 ```
+
+> [!TIP] Brak Pythona na komputerze? Żaden problem!
+> Skrypt Pythona to tylko opcjonalne ułatwienie. Twój asystent AI potrafi wykonać dokładnie to samo bezpośrednio w oknie czatu — wystarczy napisać: *„Wygeneruj moją notatkę na dziś”*, a agent utworzy plik sam, bez potrzeby instalowania czegokolwiek.
 
 ---
 
@@ -89,8 +92,11 @@ Nie. Możesz używać darmowych kluczy API (np. darmowy poziom Google AI Studio 
 ### Czy moje notatki i dane są prywatne?
 Tak. Cały sejf notatek oraz logika agenta żyją w 100% lokalnie na Twoim dysku twardym. Dane trafiają do modelu AI tylko wtedy, gdy sam zadasz pytanie w oknie agenta. Zero automatycznej telemetrii i pełna kontrola nad Twoimi plikami.
 
-### Co jeśli nie znam Pythona?
-Nie musisz znać ani jednej linijki kodu. Skrypt `daily_note.py` jest wbudowany, a do jego uruchomienia wystarczy wpisać jedno proste polecenie w terminalu lub po prostu napisać do asystenta w czacie: *„Wygeneruj moją notatkę na dzisiaj”*.
+### Co jeśli nie mam lub nie znam Pythona?
+Nie musisz mieć ani znać Pythona! Twój asystent AI potrafi wykonać wszystkie operacje bezpośrednio na plikach Markdown w oknie czatu. Jeśli jednak chcesz korzystać ze skryptu w tle, możesz zainstalować Pythona w 10 sekund jedną komendą:
+* **Windows (PowerShell):** `winget install Python.Python.3.12`
+* **macOS:** `brew install python`
+* **Linux:** `sudo apt install python3`
 
 ---
 
