@@ -64,14 +64,14 @@ def generuj_notatke():
         daily_dir.mkdir(parents=True, exist_ok=True)
         
     teraz = datetime.now()
-    data_iso = teraz.strftime("%Y-%m-%d")
+    data_format = teraz.strftime("%d.%m.%Y")
     dzien_tygodnia = DNI_TYGODNIA[teraz.weekday()]
     ladna_data = f"{teraz.day} {MIESIACE[teraz.month - 1]} {teraz.year} ({dzien_tygodnia})"
     
-    docelowy_plik = daily_dir / f"{data_iso}.md"
+    docelowy_plik = daily_dir / f"{data_format}.md"
     
     if docelowy_plik.exists():
-        print(f"ℹ️  Notatka dzienna na dzień {data_iso} już istnieje:")
+        print(f"ℹ️  Notatka dzienna na dzień {data_format} już istnieje:")
         print(f"   -> {docelowy_plik}")
         return
     
@@ -99,7 +99,7 @@ def generuj_notatke():
 * 
 
 ---
-#daily #{teraz.strftime("%Y-%m")}
+#daily #{teraz.strftime("%m.%Y")}
 """
 
     docelowy_plik.write_text(szablon, encoding="utf-8")
