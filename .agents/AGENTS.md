@@ -91,7 +91,7 @@
 ---
 
 ## 🐍 Obsługa Skryptów i Brak Pythona (Zasada Fallbacku)
-* **Natywna sprawczość:** Skrypt `.agents/scripts/daily_note.py` to opcjonalne narzędzie pomocnicze. Jeśli użytkownik prosi o utworzenie notatki dziennej lub podsumowanie zadań, a Python nie jest zainstalowany — **zawsze wykonaj operację bezpośrednio na plikach Markdown** (samodzielnie odczytaj aktywne zadania z `sejf/Zadania/Zadania.md` i zapisz plik w `sejf/Daily Notes/DD.MM.YYYY.md`).
+* **Natywna sprawczość:** Skrypt `.agents/scripts/daily_note.py` to opcjonalne narzędzie pomocnicze. Jeśli użytkownik prosi o utworzenie notatki dziennej lub podsumowanie zadań, a Python nie jest zainstalowany — **zawsze wykonaj operację bezpośrednio na plikach Markdown** (samodzielnie odczytaj aktywne zadania z `sejf/Zadania/Zadania.md` i zapisz plik w `sejf/Daily Notes/YYYY-MM-DD.md`).
 * **Brak Pythona nigdy nie blokuje pracy:** Nie zgłaszaj błędów o braku środowiska Python. Zrealizuj zadanie bezpośrednio w sejfie.
 * **Prosta pomoc w instalacji:** Jeśli użytkownik wyraźnie zapyta, jak zainstalować Pythona do automatyzacji w tle, podaj najprostszą jednolinijkową komendę:
   * Windows (PowerShell): `winget install Python.Python.3.12`

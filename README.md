@@ -70,7 +70,7 @@ WORKSPACE/
 ## ⚙️ Wbudowane Skrypty
 
 W folderze `.agents/scripts/` znajduje się gotowy skrypt w czystym standardowym Pythonie 3 (zero zewnętrznych instalacji `pip`):
-* `daily_note.py` — automatycznie tworzy nową notatkę dzienną w `sejf/Daily Notes/DD.MM.YYYY.md` i zaciąga aktywne zadania z pliku `sejf/Zadania/Zadania.md`.
+* `daily_note.py` — automatycznie tworzy nową notatkę dzienną w `sejf/Daily Notes/YYYY-MM-DD.md` i zaciąga aktywne zadania z pliku `sejf/Zadania/Zadania.md`.
 
 Uruchomienie w terminalu:
 ```bash
