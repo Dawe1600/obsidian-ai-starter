@@ -47,10 +47,11 @@ WORKSPACE/
 ## 🚀 Szybki Start w 3 Krokach
 
 ### Krok 1: Pobierz szablon
-Sklonuj to repozytorium na swój dysk:
-```bash
-git clone https://github.com/Dawe1600/obsidian-ai-starter.git
-```
+* **Opcja A (Git):** Sklonuj repozytorium na swój dysk:
+  ```bash
+  git clone https://github.com/Dawe1600/obsidian-ai-starter.git
+  ```
+* **Opcja B (Bez Gita — ZIP):** Jeśli nie masz zainstalowanego Gita, kliknij zielony przycisk **`<> Code`** na samej górze tej strony na GitHubie, wybierz **Download ZIP** i rozpakuj archiwum w wybranym miejscu na dysku.
 
 ### Krok 2: Otwórz Workspace i Skonfiguruj Asystenta
 1. Uruchom swoje narzędzie agencyjne (np. **Antigravity**, **Cursor**, **Claude Code**, **Cline**, **Windsurf** itp.).
