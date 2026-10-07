@@ -1,5 +1,10 @@
 # 🧠 Obsidian + AI Agent Starter Pack
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Obsidian](https://img.shields.io/badge/Obsidian-v1.0+-7C3AED.svg?logo=obsidian&logoColor=white)](https://obsidian.md)
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB.svg?logo=python&logoColor=white)](https://python.org)
+[![Privacy](https://img.shields.io/badge/Prywatno%C5%9B%C4%87-100%25_Lokalnie-orange.svg)]()
+
 > Gotowy, modularny szablon łączący Twój lokalny sejf notatek **Obsidian** z autonomicznym **Agentem AI** (np. Antigravity, Claude Code, Cursor, Windsurf) i dowolnym wybranym modelem.
 
 ---
@@ -70,6 +75,22 @@ Uruchomienie:
 ```bash
 python .agents/scripts/daily_note.py
 ```
+
+---
+
+## ❓ Najczęściej Zadawane Pytania (FAQ)
+
+### Czy to działa na Windowsie, macOS i Linuksie?
+Tak. Zarówno pliki Markdown w Obsidianie, jak i skrypt w standardowym Pythonie 3 działają w 100% identycznie na każdym systemie operacyjnym.
+
+### Czy muszę płacić za modele AI?
+Nie. Możesz używać darmowych kluczy API (np. darmowy poziom Google AI Studio z modelem Gemini Flash) lub uruchomić całkowicie darmowy lokalny model na własnym komputerze przez Ollama (np. Llama 3, Qwen, Mistral).
+
+### Czy moje notatki i dane są prywatne?
+Tak. Cały sejf notatek oraz logika agenta żyją w 100% lokalnie na Twoim dysku twardym. Dane trafiają do modelu AI tylko wtedy, gdy sam zadasz pytanie w oknie agenta. Zero automatycznej telemetrii i pełna kontrola nad Twoimi plikami.
+
+### Co jeśli nie znam Pythona?
+Nie musisz znać ani jednej linijki kodu. Skrypt `daily_note.py` jest wbudowany, a do jego uruchomienia wystarczy wpisać jedno proste polecenie w terminalu lub po prostu napisać do asystenta w czacie: *„Wygeneruj moją notatkę na dzisiaj”*.
 
 ---
 

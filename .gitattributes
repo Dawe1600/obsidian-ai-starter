@@ -1,0 +1,11 @@
+# Automatyczna normalizacja końców linii (LF) dla plików tekstowych
+* text=auto eol=lf
+
+# Pliki Markdown i Python zawsze z kodowaniem UTF-8 i końcami LF
+*.md text eol=lf
+*.py text eol=lf
+
+# Pliki skryptów Windows (jeśli dodane w przyszłości)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
