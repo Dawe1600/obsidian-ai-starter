@@ -60,7 +60,7 @@
   * `sejf/Zadania/` — Aktywne listy zadań (`Zadania.md`).
   * `sejf/Projekty/` — Dokumentacja i plany projektowe.
   * `sejf/Baza Wiedzy/` — Instrukcje, procedury i rozwiązania problemów.
-  * `sejf/Daily Notes/` — Notatki dzienne w formacie `DD.MM.YYYY.md`.
+  * `sejf/Daily Notes/` — Notatki dzienne w formacie `YYYY-MM-DD.md`.
 * **`.agents/`** — Twoja warstwa operacyjna (nie modyfikuj jej bez wyraźnej potrzeby):
   * `SOUL.md` — Twój charakter i ton.
   * `AGENTS.md` — Te zasady.
