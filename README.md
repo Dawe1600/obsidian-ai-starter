@@ -88,7 +88,7 @@ python .agents/scripts/daily_note.py
 Tak. Zarówno pliki Markdown w Obsidianie, jak i skrypt w standardowym Pythonie 3 działają w 100% identycznie na każdym systemie operacyjnym.
 
 ### Czy muszę płacić za modele AI?
-Nie. Możesz używać darmowych kluczy API (np. darmowy poziom Google AI Studio z modelem Gemini Flash) lub uruchomić całkowicie darmowy lokalny model na własnym komputerze przez Ollama (np. Llama 3, Qwen, Mistral).
+Nie. Możesz korzystać ze środowisk takich jak **Antigravity** na darmowym planie, narzędzi typu **Open Code**, bezpłatnych kluczy API (np. darmowy dostęp do modeli Gemini w Google AI Studio) lub całkowicie darmowych modeli lokalnych uruchomionych na własnym komputerze przez Ollama (np. Llama 3, Qwen).
 
 ### Czy moje notatki i dane są prywatne?
 Tak. Cały sejf notatek oraz logika agenta żyją w 100% lokalnie na Twoim dysku twardym. Dane trafiają do modelu AI tylko wtedy, gdy sam zadasz pytanie w oknie agenta. Zero automatycznej telemetrii i pełna kontrola nad Twoimi plikami.
