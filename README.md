@@ -52,17 +52,17 @@ Sklonuj to repozytorium na swój dysk:
 git clone https://github.com/Dawe1600/obsidian-ai-starter.git
 ```
 
-### Krok 2: Otwórz Sejf w Obsidianie
-1. Uruchom program **Obsidian**.
-2. Kliknij **Otwórz folder jako sejf** (Open folder as vault).
-3. Wskaż podfolder `sejf/` z pobranego repozytorium.
-
-### Krok 3: Otwórz Workspace i Poznaj Asystenta
-1. Uruchom swoje narzędzie agencyjne (np. **Antigravity**, **Claude Code**, **Cursor**, **Cline**, **Windsurf** itp.).
+### Krok 2: Otwórz Workspace i Skonfiguruj Asystenta
+1. Uruchom swoje narzędzie agencyjne (np. **Antigravity**, **Cursor**, **Claude Code**, **Cline**, **Windsurf** itp.).
 2. Jako katalog roboczy (Workspace) otwórz **główny folder projektu** (ten zawierający zarówno `.agents/`, jak i `sejf/`).
 3. Wybierz swój preferowany model (np. Claude, Gemini, GPT lub model lokalny).
 4. Napisz dowolną pierwszą wiadomość (np. *„Cześć, zacznijmy!”*).
-   * Agent automatycznie wykryje pierwsze uruchomienie, przeprowadzi krótki wywiad w 3 krokach i sam skonfiguruje pod Ciebie pliki `SOUL.md`, `AGENTS.md` oraz `MEMORY.md`.
+   * Agent automatycznie wykryje pierwsze uruchomienie, przeprowadzi krótki wywiad w 3 krokach i sam zbuduje strukturę sejfu oraz skonfiguruje pliki `SOUL.md`, `AGENTS.md` i `MEMORY.md`.
+
+### Krok 3: Otwórz Sejf w Obsidianie
+1. Uruchom program **Obsidian**.
+2. Kliknij **Otwórz folder jako sejf** (Open folder as vault).
+3. Wskaż podfolder `sejf/` i ciesz się gotowym, spersonalizowanym centrum dowodzenia!
 
 ---
 
