@@ -1,0 +1,19 @@
+# Obsidian
+sejf/.obsidian/workspace.json
+sejf/.obsidian/workspace-mobile.json
+sejf/.obsidian/cache/
+sejf/.obsidian/plugins/*/data.json.bak
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
