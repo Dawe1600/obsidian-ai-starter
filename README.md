@@ -1,6 +1,6 @@
 # 🧠 Obsidian + AI Agent Starter Pack
 
-> Gotowy, modularny szablon łączący Twój lokalny sejf notatek **Obsidian** z autonomicznym **Agentem AI** (np. Antigravity, Claude Code, Cursor) napędzanym modelem Gemini.
+> Gotowy, modularny szablon łączący Twój lokalny sejf notatek **Obsidian** z autonomicznym **Agentem AI** (np. Antigravity, Claude Code, Cursor, Windsurf) i dowolnym wybranym modelem.
 
 ---
 
@@ -11,6 +11,7 @@ Większość poradników uczy wrzucania plików konfiguracyjnych bezpośrednio d
 ```text
 WORKSPACE/
 ├── .agents/                      <-- 🤖 Warstwa operacyjna (Mózg Agenta)
+│   ├── SOUL.md                   # Tożsamość, charakter i styl asystenta
 │   ├── AGENTS.md                 # Kodeks i zasady postępowania agenta
 │   ├── MEMORY.md                 # Pamięć długoterminowa asystenta
 │   ├── scripts/                  # Automatyzacje i skrypty w Pythonie
@@ -34,6 +35,7 @@ WORKSPACE/
 1. **Czystość w Obsidianie:** W aplikacji Obsidian otwierasz wyłącznie podfolder `sejf/`. Twój graf powiązań i drzewo plików są wolne od technicznych skryptów, logów i reguł.
 2. **Pełna sprawczość agenta:** Otwierając katalog główny (`WORKSPACE`) w środowisku agencyjnym, agent widzi zarówno Twoje notatki w `sejf/`, jak i swoje instrukcje w `.agents/`.
 3. **Pamięć na Twoim dysku:** Koniec z zamykaniem wiedzy w chmurze korporacji. Twoja pamięć AI żyje w pliku `MEMORY.md`, który możesz wersjonować w Git.
+4. **Osobowość skrojona na miarę:** W pliku `SOUL.md` asystent przechowuje swój charakter, ton głosu i model relacji z Tobą.
 
 ---
 
@@ -50,14 +52,12 @@ git clone https://github.com/Dawe1600/obsidian-ai-starter.git
 2. Kliknij **Otwórz folder jako sejf** (Open folder as vault).
 3. Wskaż podfolder `sejf/` z pobranego repozytorium.
 
-### Krok 3: Otwórz Workspace w Środowisku Agencyjnym
-1. Uruchom **Antigravity** (lub Claude Code / Cursor).
+### Krok 3: Otwórz Workspace i Poznaj Asystenta
+1. Uruchom swoje narzędzie agencyjne (np. **Antigravity**, **Claude Code**, **Cursor**, **Cline**, **Windsurf** itp.).
 2. Jako katalog roboczy (Workspace) otwórz **główny folder projektu** (ten zawierający zarówno `.agents/`, jak i `sejf/`).
-3. Wybierz model **Gemini 2.5/3.8 Flash** lub **Pro**.
-4. Wpisz pierwsze polecenie:
-   ```text
-   Przeczytaj moje pliki z folderu .agents/ i powiedz mi, w czym możesz mi dzisiaj pomóc?
-   ```
+3. Wybierz swój preferowany model (np. Claude, Gemini, GPT lub model lokalny).
+4. Napisz dowolną pierwszą wiadomość (np. *„Cześć, zacznijmy!”*).
+   * Agent automatycznie wykryje pierwsze uruchomienie, przeprowadzi krótki wywiad w 3 krokach i sam skonfiguruje pod Ciebie pliki `SOUL.md`, `AGENTS.md` oraz `MEMORY.md`.
 
 ---
 
