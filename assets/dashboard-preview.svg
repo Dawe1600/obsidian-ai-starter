@@ -1,0 +1,343 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <!-- App Window Shadow -->
+    <filter id="appShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <style>
+    .ui-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle decorative ambient lights -->
+  <circle cx="150" cy="120" r="220" fill="#7c3aed" fill-opacity="0.12"/>
+  <circle cx="1050" cy="580" r="240" fill="#0284c7" fill-opacity="0.1"/>
+
+  <!-- ============================================================== -->
+  <!-- MAIN APPLICATION WINDOW (macOS/Obsidian Style Mockup) -->
+  <!-- ============================================================== -->
+  <g transform="translate(40, 35)" filter="url(#appShadow)">
+    <!-- Window Outline -->
+    <rect width="1120" height="630" rx="10" fill="#1e1e1e" stroke="#333333" stroke-width="1"/>
+
+    <!-- 1. Top Window Titlebar -->
+    <rect width="1120" height="38" rx="10" fill="#141414"/>
+    <path d="M 0 38 L 1120 38" stroke="#2a2a2a" stroke-width="1"/>
+
+    <!-- Traffic Lights -->
+    <circle cx="20" cy="19" r="5.5" fill="#ff5f56"/>
+    <circle cx="36" cy="19" r="5.5" fill="#ffbd2e"/>
+    <circle cx="52" cy="19" r="5.5" fill="#27c93f"/>
+
+    <!-- App Title / Window Header -->
+    <text x="560" y="24" text-anchor="middle" class="ui-text" font-size="12" font-weight="500" fill="#888888">sejf : Obsidian v1.7.7  |  AI Agent Workspace</text>
+
+    <!-- Window Right Controls -->
+    <g transform="translate(1040, 12)">
+      <rect x="0" y="0" width="60" height="16" rx="4" fill="#242424"/>
+      <text x="30" y="12" text-anchor="middle" class="ui-text" font-size="10" fill="#aaaaaa">Workspace</text>
+    </g>
+
+    <!-- ============================================================== -->
+    <!-- 2. LEFT RIBBON (OBSIDIAN ICON BAR, width=44px) -->
+    <!-- ============================================================== -->
+    <g transform="translate(0, 38)">
+      <rect width="44" height="592" fill="#161616" stroke="#262626" stroke-width="1"/>
+
+      <!-- Ribbon Icons -->
+      <!-- Magnifying Glass (Search) -->
+      <g transform="translate(14, 18)" stroke="#888888" stroke-width="1.6" fill="none">
+        <circle cx="6" cy="6" r="4.5"/>
+        <line x1="9.5" y1="9.5" x2="13" y2="13"/>
+      </g>
+
+      <!-- Graph View Icon -->
+      <g transform="translate(14, 52)" stroke="#a78bfa" stroke-width="1.5" fill="none">
+        <circle cx="3" cy="4" r="2" fill="#a78bfa"/>
+        <circle cx="12" cy="3" r="2" fill="#a78bfa"/>
+        <circle cx="8" cy="11" r="2" fill="#a78bfa"/>
+        <line x1="3" y1="4" x2="8" y2="11"/>
+        <line x1="12" y1="3" x2="8" y2="11"/>
+      </g>
+
+      <!-- Canvas Icon -->
+      <g transform="translate(14, 86)" stroke="#888888" stroke-width="1.5" fill="none">
+        <rect x="2" y="2" width="11" height="11" rx="1.5"/>
+        <line x1="2" y1="6" x2="13" y2="6"/>
+      </g>
+
+      <!-- Daily Notes Icon (Calendar) -->
+      <g transform="translate(14, 120)" stroke="#888888" stroke-width="1.5" fill="none">
+        <rect x="2" y="3" width="11" height="10" rx="1.5"/>
+        <line x1="2" y1="6" x2="13" y2="6"/>
+        <line x1="5" y1="1" x2="5" y2="3"/>
+        <line x1="10" y1="1" x2="10" y2="3"/>
+      </g>
+
+      <!-- Settings Icon (Bottom) -->
+      <g transform="translate(14, 555)" stroke="#666666" stroke-width="1.5" fill="none">
+        <circle cx="7.5" cy="7.5" r="3"/>
+        <path d="M 7.5 1 L 7.5 3 M 7.5 12 L 7.5 14 M 1 7.5 L 3 7.5 M 12 7.5 L 14 7.5"/>
+      </g>
+    </g>
+
+    <!-- ============================================================== -->
+    <!-- 3. FILE EXPLORER SIDEBAR (width=196px) -->
+    <!-- ============================================================== -->
+    <g transform="translate(44, 38)">
+      <rect width="196" height="592" fill="#181818" stroke="#262626" stroke-width="1"/>
+
+      <!-- Vault Name Header -->
+      <g transform="translate(14, 16)">
+        <text x="0" y="11" class="ui-text" font-size="11" font-weight="700" fill="#999999" letter-spacing="0.5">SEJF</text>
+        <path d="M 38 7 L 42 11 L 46 7" stroke="#666666" stroke-width="1.5" fill="none"/>
+      </g>
+
+      <!-- Folder Tree Items -->
+      <g transform="translate(12, 42)">
+        <g transform="translate(0, 0)">
+          <path d="M 2 4 L 5 7 L 2 10" stroke="#888888" stroke-width="1.2" fill="none"/>
+          <text x="14" y="9" class="ui-text" font-size="12" fill="#cccccc">📁 Baza Wiedzy</text>
+        </g>
+
+        <g transform="translate(0, 24)">
+          <path d="M 2 4 L 5 7 L 2 10" stroke="#888888" stroke-width="1.2" fill="none"/>
+          <text x="14" y="9" class="ui-text" font-size="12" fill="#cccccc">📁 Daily Notes</text>
+        </g>
+
+        <g transform="translate(0, 48)">
+          <path d="M 2 4 L 5 7 L 2 10" stroke="#888888" stroke-width="1.2" fill="none"/>
+          <text x="14" y="9" class="ui-text" font-size="12" fill="#cccccc">📁 Projekty</text>
+        </g>
+
+        <g transform="translate(0, 72)">
+          <path d="M 2 4 L 5 7 L 2 10" stroke="#888888" stroke-width="1.2" fill="none"/>
+          <text x="14" y="9" class="ui-text" font-size="12" fill="#cccccc">📁 Zadania</text>
+        </g>
+
+        <!-- Active Note: Pulpit.md -->
+        <g transform="translate(0, 96)">
+          <rect x="-4" y="-3" width="186" height="26" rx="4" fill="#7c3aed" fill-opacity="0.22"/>
+          <text x="14" y="14" class="ui-text" font-size="12" font-weight="600" fill="#ffffff">🎯 Pulpit.md</text>
+        </g>
+      </g>
+
+      <!-- Separator line for Agent Operational Layer -->
+      <path d="M 12 180 L 184 180" stroke="#282828" stroke-width="1"/>
+
+      <g transform="translate(14, 198)">
+        <text x="0" y="11" class="ui-text" font-size="10" font-weight="700" fill="#666666" letter-spacing="0.5">WARSTWA AGENTA (.agents/)</text>
+      </g>
+
+      <g transform="translate(14, 222)">
+        <text x="0" y="12" class="ui-text" font-size="11" fill="#777777">📜 AGENTS.md</text>
+        <text x="0" y="32" class="ui-text" font-size="11" fill="#777777">🧠 MEMORY.md</text>
+        <text x="0" y="52" class="ui-text" font-size="11" fill="#777777">🎭 SOUL.md</text>
+        <text x="0" y="72" class="ui-text" font-size="11" fill="#777777">⚡ scripts/daily_note.py</text>
+        <text x="0" y="92" class="ui-text" font-size="11" fill="#777777">🛠️ skills/obsidian-manager</text>
+      </g>
+    </g>
+
+    <!-- ============================================================== -->
+    <!-- 4. OBSIDIAN NOTE EDITOR (width=480px, x=240 to x=720) -->
+    <!-- ============================================================== -->
+    <g transform="translate(240, 38)">
+      <rect width="480" height="592" fill="#1e1e1e"/>
+
+      <!-- Tab Bar Header -->
+      <rect width="480" height="34" fill="#181818" stroke="#262626" stroke-width="1"/>
+
+      <!-- Active Tab: Pulpit.md -->
+      <g transform="translate(8, 5)">
+        <rect width="135" height="29" rx="5" fill="#1e1e1e" stroke="#2c2c2c" stroke-width="1"/>
+        <text x="14" y="18" class="ui-text" font-size="12" font-weight="600" fill="#e0e0e0">🎯 Pulpit.md</text>
+        <text x="118" y="18" class="ui-text" font-size="11" fill="#777777">×</text>
+      </g>
+
+      <g transform="translate(150, 12)">
+        <text x="0" y="12" class="ui-text" font-size="11" fill="#666666">📝 Zadania.md</text>
+      </g>
+
+      <!-- Reading view icon -->
+      <g transform="translate(435, 12)" stroke="#777777" stroke-width="1.4" fill="none">
+        <path d="M 2 3 C 5 2 9 2 12 3 L 12 13 C 9 12 5 12 2 13 Z"/>
+        <path d="M 22 3 C 19 2 15 2 12 3 L 12 13 C 15 12 19 12 22 13 Z"/>
+      </g>
+
+      <!-- Rendered Note Content -->
+      <g transform="translate(28, 48)">
+        <text x="0" y="24" class="ui-text" font-size="20" font-weight="800" fill="#ffffff">🎯 Pulpit: Centrum Dowodzenia</text>
+
+        <!-- Obsidian Callout Box -->
+        <g transform="translate(0, 38)">
+          <rect width="424" height="52" rx="4" fill="#1e2433" stroke="#2563eb" stroke-opacity="0.3" stroke-width="1"/>
+          <rect width="4" height="52" rx="2" fill="#3b82f6"/>
+          <text x="14" y="20" class="ui-text" font-size="11" font-weight="700" fill="#60a5fa">ℹ️ Twój Osobisty Sejf</text>
+          <text x="14" y="38" class="ui-text" font-size="11" fill="#cbd5e1">Centralne miejsce do zarządzania pracą, wiedzą i zadaniami.</text>
+        </g>
+
+        <line x1="0" y1="106" x2="424" y2="106" stroke="#2a2a2a" stroke-width="1"/>
+
+        <!-- Section H2: Główne Kategorie -->
+        <text x="0" y="132" class="ui-text" font-size="13" font-weight="700" fill="#e2e8f0">⚡ Główne Kategorie (Huby)</text>
+
+        <!-- Bullets with Authentic Obsidian Purple Wikilinks -->
+        <g transform="translate(6, 154)">
+          <circle cx="2" cy="6" r="2.5" fill="#888888"/>
+          <text x="14" y="10" class="ui-text" font-size="12">
+            <tspan fill="#dddddd">📝 </tspan>
+            <tspan fill="#a78bfa" font-weight="600">[[Zadania]]</tspan>
+            <tspan fill="#999999">: Centralna lista to-do i priorytety.</tspan>
+          </text>
+        </g>
+
+        <g transform="translate(6, 178)">
+          <circle cx="2" cy="6" r="2.5" fill="#888888"/>
+          <text x="14" y="10" class="ui-text" font-size="12">
+            <tspan fill="#dddddd">🚀 </tspan>
+            <tspan fill="#a78bfa" font-weight="600">[[Projekty]]</tspan>
+            <tspan fill="#999999">: Plany projektowe, wdrożenia i sprinty.</tspan>
+          </text>
+        </g>
+
+        <g transform="translate(6, 202)">
+          <circle cx="2" cy="6" r="2.5" fill="#888888"/>
+          <text x="14" y="10" class="ui-text" font-size="12">
+            <tspan fill="#dddddd">📚 </tspan>
+            <tspan fill="#a78bfa" font-weight="600">[[Baza Wiedzy]]</tspan>
+            <tspan fill="#999999">: Procedury, rozwiązania i instrukcje.</tspan>
+          </text>
+        </g>
+
+        <g transform="translate(6, 226)">
+          <circle cx="2" cy="6" r="2.5" fill="#888888"/>
+          <text x="14" y="10" class="ui-text" font-size="12">
+            <tspan fill="#dddddd">📅 </tspan>
+            <tspan fill="#a78bfa" font-weight="600">[[Daily Notes]]</tspan>
+            <tspan fill="#999999">: Zsynchronizowana notatka dzienna.</tspan>
+          </text>
+        </g>
+
+        <line x1="0" y1="254" x2="424" y2="254" stroke="#2a2a2a" stroke-width="1"/>
+
+        <text x="0" y="278" class="ui-text" font-size="13" font-weight="700" fill="#e2e8f0">💡 Jak pracujemy?</text>
+
+        <g transform="translate(6, 298)">
+          <circle cx="2" cy="6" r="2.5" fill="#888888"/>
+          <text x="14" y="10" class="ui-text" font-size="11" fill="#bbbbbb">Przekładanie luźnych myśli na zwięzłe notatki i checklisty.</text>
+        </g>
+
+        <g transform="translate(6, 318)">
+          <circle cx="2" cy="6" r="2.5" fill="#888888"/>
+          <text x="14" y="10" class="ui-text" font-size="11" fill="#bbbbbb">Automatyczny zapis ustaleń bez zmyślania faktów.</text>
+        </g>
+
+        <g transform="translate(6, 338)">
+          <circle cx="2" cy="6" r="2.5" fill="#888888"/>
+          <text x="14" y="10" class="ui-text" font-size="11" fill="#bbbbbb">Higiena grafu: podrzędne notatki nie linkują do Pulpitu.</text>
+        </g>
+
+        <line x1="0" y1="366" x2="424" y2="366" stroke="#2a2a2a" stroke-width="1"/>
+
+        <!-- Obsidian Tags at Bottom -->
+        <g transform="translate(0, 384)">
+          <rect x="0" y="0" width="58" height="20" rx="10" fill="#262626"/>
+          <text x="29" y="14" text-anchor="middle" class="ui-text" font-size="11" font-weight="600" fill="#a78bfa">#pulpit</text>
+
+          <rect x="66" y="0" width="80" height="20" rx="10" fill="#262626"/>
+          <text x="106" y="14" text-anchor="middle" class="ui-text" font-size="11" font-weight="600" fill="#a78bfa">#dashboard</text>
+
+          <rect x="154" y="0" width="50" height="20" rx="10" fill="#262626"/>
+          <text x="179" y="14" text-anchor="middle" class="ui-text" font-size="11" font-weight="600" fill="#a78bfa">#start</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- ============================================================== -->
+    <!-- 5. RIGHT AI AGENT PANEL (width=400px, x=720 to x=1120) -->
+    <!-- ============================================================== -->
+    <g transform="translate(720, 38)">
+      <!-- Agent Background -->
+      <rect width="400" height="592" fill="#141720" stroke="#262626" stroke-width="1"/>
+
+      <!-- Clean Realistic Header (No purple sci-fi gradient, no emoji) -->
+      <rect width="400" height="38" fill="#181b24" stroke="#232938" stroke-width="1"/>
+      
+      <!-- Agent Name with status dot -->
+      <circle cx="20" cy="19" r="4" fill="#10b981"/>
+      <text x="32" y="23" class="ui-text" font-size="12" font-weight="600" fill="#f1f5f9">Antigravity</text>
+
+      <!-- Real Dropdown Pill -->
+      <g transform="translate(245, 8)">
+        <rect width="142" height="22" rx="4" fill="#1f2433" stroke="#2d374a" stroke-width="1"/>
+        <text x="60" y="15" text-anchor="middle" class="mono" font-size="10" fill="#cbd5e1">Gemini 3.8 Flash</text>
+        <path d="M 124 10 L 128 14 L 132 10" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+      </g>
+
+      <!-- Chat Stream Area -->
+      <g transform="translate(18, 50)">
+        <!-- 1. User Message (Clean dark speech bubble) -->
+        <g transform="translate(36, 0)">
+          <rect width="328" height="42" rx="8" fill="#1e2638" stroke="#2b364e" stroke-width="1"/>
+          <text x="14" y="26" class="ui-text" font-size="11.5" fill="#f8fafc">Wygeneruj notatkę na dziś i zsynchronizuj zadania</text>
+        </g>
+
+        <!-- 2. Tool Execution Line (Subtle terminal action) -->
+        <g transform="translate(36, 50)">
+          <rect width="328" height="24" rx="4" fill="#111622" stroke="#1d2638" stroke-width="1"/>
+          <circle cx="12" cy="12" r="3" fill="#38bdf8"/>
+          <text x="22" y="16" class="mono" font-size="10" fill="#7dd3fc">python .agents/scripts/daily_note.py</text>
+        </g>
+
+        <!-- 3. Assistant Message (Clean natural response, no heavy neon borders) -->
+        <g transform="translate(0, 84)">
+          <rect width="364" height="200" rx="8" fill="#161b26" stroke="#232a3a" stroke-width="1"/>
+          
+          <g transform="translate(16, 22)">
+            <text x="0" y="0" class="ui-text" font-size="11.5" fill="#e2e8f0">Wygenerowałem nową notatkę dzienną na dziś:</text>
+            
+            <!-- Code pill -->
+            <rect x="0" y="10" width="225" height="20" rx="4" fill="#0f141f" stroke="#1e2638" stroke-width="1"/>
+            <text x="8" y="24" class="mono" font-size="10" fill="#38bdf8">sejf/Daily Notes/2026-10-20.md</text>
+
+            <text x="0" y="52" class="ui-text" font-size="11.5" fill="#e2e8f0">Zsynchronizowano 4 aktywne zadania z Zadania.md:</text>
+            <text x="8" y="72" class="ui-text" font-size="10.5" fill="#94a3b8">• [ ] Skonfigurować środowisko Docker</text>
+            <text x="8" y="90" class="ui-text" font-size="10.5" fill="#94a3b8">• [ ] Dodać procedurę backupu do Bazy Wiedzy</text>
+
+            <text x="0" y="118" class="ui-text" font-size="11.5" fill="#e2e8f0">Higiena grafu: <tspan fill="#a78bfa">zero linków zwrotnych do Pulpitu</tspan></text>
+            <text x="0" y="138" class="ui-text" font-size="11.5" fill="#e2e8f0">Kontekst sesji zapisany w: <tspan class="mono" font-size="10.5" fill="#f59e0b">.agents/MEMORY.md</tspan></text>
+          </g>
+        </g>
+
+        <!-- 4. Interactive-looking Chat Input Bar at the Bottom -->
+        <g transform="translate(0, 296)">
+          <rect width="364" height="42" rx="8" fill="#181c26" stroke="#283244" stroke-width="1"/>
+          <text x="14" y="25" class="ui-text" font-size="11" fill="#55647e">Wpisz polecenie do asystenta...</text>
+          
+          <!-- Send Button -->
+          <rect x="328" y="7" width="28" height="28" rx="6" fill="#2563eb"/>
+          <path d="M 342 23 L 342 17 M 339 20 L 342 17 L 345 20" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+        </g>
+
+        <!-- 5. Footer Architecture Pill -->
+        <g transform="translate(0, 350)">
+          <rect width="364" height="26" rx="5" fill="#10141d" stroke="#1d2433" stroke-width="1"/>
+          <circle cx="14" cy="13" r="3" fill="#10b981"/>
+          <text x="24" y="17" class="ui-text" font-size="10" fill="#818ea8">Zero Vendor Lock-in : lokalne pliki Markdown pod kontrolą w Git</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

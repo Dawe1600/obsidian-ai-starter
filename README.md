@@ -3,11 +3,27 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Obsidian](https://img.shields.io/badge/Obsidian-v1.0+-7C3AED.svg?logo=obsidian&logoColor=white)](https://obsidian.md)
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB.svg?logo=python&logoColor=white)](https://python.org)
-[![Privacy](https://img.shields.io/badge/Prywatno%C5%9B%C4%87-100%25_Lokalnie-orange.svg)]()
+[![Architektura](https://img.shields.io/badge/Architektura-Zero_Lock--in-orange.svg)]()
+
+![Obsidian AI Agent Banner](assets/banner.svg)
 
 > Gotowy, modularny szablon łączący Twój lokalny sejf notatek **Obsidian** z autonomicznym **Agentem AI** (np. Antigravity, Claude Code, Cursor, Windsurf) i dowolnym wybranym modelem.
 >
 > ✅ Przetestowane w **Antigravity** na modelu **Gemini Flash 3.8** oraz w **OpenCode** na modelu **MiMo-V2.6-Flash Free**.
+
+---
+
+## 📸 Podgląd w Działaniu
+
+### 1. Centrum Dowodzenia i Współpraca z Agentem AI
+Twój sejf posiada uporządkowany Pulpit wejściowy, a asystent AI na bieżąco odczytuje zadania, aktualizuje projekty i rejestruje nową wiedzę w czystym formacie Markdown:
+
+![Podgląd Pulpitu i Agenta](assets/dashboard-preview.svg)
+
+### 2. Czysty Graf Powiązań (Higiena Grafu Wiedzy)
+Koniec z chaotycznymi pajęczynami, w których każda notatka linkuje bezsensownie do strony głównej. Zastosowano ścisłą regułę hierarchii: `Pulpit` łączy się wyłącznie z hubami kategorii, a notatki szczegółowe łączą się horyzontalnie między sobą:
+
+![Podgląd Grafu Obsidian](assets/graph-preview.svg)
 
 ---
 
@@ -35,8 +51,43 @@ WORKSPACE/
 │   ├── Baza Wiedzy/              # Procedury, instrukcje i wiedza
 │   └── Daily Notes/              # Notatki dzienne
 │
+├── assets/                       # Grafiki i wizualizacje architektury
 ├── .gitignore
 └── README.md
+```
+
+### Przepływ Informacji w Systemie
+
+```mermaid
+flowchart TD
+    subgraph AgentWorkspace["🤖 Warstwa Agenta (.agents/)"]
+        direction TB
+        Soul["🎭 SOUL.md<br/>Tożsamość, ton i styl"]
+        Agents["📜 AGENTS.md<br/>Reguły i procedury"]
+        Memory["🧠 MEMORY.md<br/>Pamięć trwała"]
+        Tools["🛠️ scripts/ & skills/<br/>daily_note.py + obsidian-manager"]
+    end
+
+    subgraph Narzedzie["⚡ Środowisko Agencyjne (Antigravity / Claude Code / Cursor / Windsurf)"]
+        direction TB
+        Prompt["Czat z użytkownikiem & Wykonywanie zadań"]
+    end
+
+    subgraph ObsidianVault["📓 Sejf Obsidian (sejf/)"]
+        direction TB
+        Pulpit["🎯 Pulpit.md<br/>Jedyny Punkt Wejścia"]
+        subgraph Huby["Huby Kategorii"]
+            direction LR
+            Zadania["📝 Zadania/"]
+            Projekty["🚀 Projekty/"]
+            Wiedza["📚 Baza Wiedzy/"]
+            Daily["📅 Daily Notes/"]
+        end
+    end
+
+    Prompt <-->|"1. Odczyt tożsamości i pamięci"| AgentWorkspace
+    Prompt <-->|"2. Odczyt i automatyczny zapis notatek"| ObsidianVault
+    Pulpit -->|"Nawigacja hubów (brak pętli zwrotnych)"| Huby
 ```
 
 ### Dlaczego taki podział?
@@ -44,7 +95,7 @@ WORKSPACE/
 2. **Higiena grafu wiedzy:** Zastosowano regułę czystego grafu: `Pulpit` łączy się wyłącznie z hubami kategorii, a notatki podrzędne nie zaśmiecają widoku grafu linkami zwrotnymi do pulpitu.
 3. **Pełna sprawczość agenta:** Otwierając katalog główny (`WORKSPACE`) w środowisku agencyjnym, agent widzi zarówno Twoje notatki w `sejf/`, jak i swoje instrukcje w `.agents/`.
 4. **Domyślny zapis bez halucynacji:** Asystent automatycznie rejestruje ustalenia, plany i decyzje w sejfie, a w razie wątpliwości pyta zamiast zmyślać nieomówione fakty.
-5. **Pamięć na Twoim dysku:** Koniec z zamykaniem wiedzy w chmurze korporacji. Twoja pamięć AI żyje w pliku `MEMORY.md`, który możesz wersjonować w Git.
+5. **Pamięć na Twoim dysku (Zero Lock-in):** Koniec z zamykaniem wiedzy w chmurze korporacji. Twoja pamięć AI żyje w pliku `MEMORY.md`, który możesz wersjonować w Git.
 6. **Osobowość skrojona na miarę:** W pliku `SOUL.md` asystent przechowuje swój charakter, ton głosu i model relacji z Tobą.
 
 ---
@@ -95,8 +146,8 @@ Tak. Zarówno pliki Markdown w Obsidianie, jak i skrypt w standardowym Pythonie 
 ### Czy muszę płacić za modele AI?
 Nie. Możesz korzystać ze środowisk takich jak **Antigravity** na darmowym planie, narzędzi typu **Open Code**, bezpłatnych kluczy API (np. darmowy dostęp do modeli Gemini w Google AI Studio) lub całkowicie darmowych modeli lokalnych uruchomionych na własnym komputerze przez Ollama (np. Llama 3, Qwen).
 
-### Czy moje notatki i dane są prywatne?
-Tak. Cały sejf notatek oraz logika agenta żyją w 100% lokalnie na Twoim dysku twardym. Dane trafiają do modelu AI tylko wtedy, gdy sam zadasz pytanie w oknie agenta. Zero automatycznej telemetrii i pełna kontrola nad Twoimi plikami.
+### Gdzie przechowywane są moje notatki i pamięć agenta?
+Wszystkie notatki w sejfie oraz pamięć długoterminowa asystenta (`MEMORY.md`) żyją w 100% na Twoim dysku twardym w otwartym formacie Markdown. Masz pełną kontrolę nad swoimi danymi i zero vendor lock-inu. Wybór modelu AI należy do Ciebie: możesz korzystać z wygodnych modeli chmurowych (np. Gemini, Claude, GPT) lub uruchomić w pełni lokalny model przez Ollama (np. Llama 3, Qwen).
 
 ### Co jeśli nie mam lub nie znam Pythona?
 Nie musisz mieć ani znać Pythona! Twój asystent AI potrafi wykonać wszystkie operacje bezpośrednio na plikach Markdown w oknie czatu. Jeśli jednak chcesz korzystać ze skryptu w tle, możesz zainstalować Pythona w 10 sekund jedną komendą:
