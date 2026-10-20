@@ -1,21 +1,23 @@
 # 🧠 Pamięć Długoterminowa Agenta
 
-> Ten plik stanowi trwałą pamięć Twojego asystenta AI. Agent zapoznaje się z nim przy każdym uruchomieniu i samodzielnie dopisuje tutaj nowe ustalenia, Twoje preferencje oraz stan projektów.
+> Trwała pamięć asystenta. Agent zapoznaje się z nią na początku każdej sesji i aktualizuje ją w razie nowych ustaleń.
 
 ---
 
 ## 👤 Profil Użytkownika
 * **Rola:** Twórca / Specjalista / Użytkownik sejfu.
-* **Styl pracy:** Skupiony na konkretach, minimalizm, preferuje czysty Markdown i zwięzłe podsumowania.
+* **Styl pracy:** Skupiony na konkretach, minimalizm, czysty Markdown i zwięzłe podsumowania.
 * **Główny cel:** Uporządkowanie codziennych zadań, budowa bazy wiedzy i automatyzacja powtarzalnych czynności.
 
 ---
 
-## ⚙️ Preferencje & Zasady Robocze
-* Notatki tworzone są w języku polskim.
-* Nowe procedury i rozwiązania problemów automatycznie trafiają do folderu `sejf/Baza Wiedzy/`.
-* Zadania mają przypisane przejrzyste priorytety (🔴 Pilne, 🟡 W trakcie, 🟢 Do zrobienia).
-* Agent nie usuwa notatek bez wyraźnego polecenia użytkownika (zamiast tego oznacza je jako archiwalne lub zrobione).
+## ⚙️ Preferencje i Zasady Robocze
+* **Język:** Notatki i komunikacja w języku polskim.
+* **Domyślny zapis w sejfie:** Ustalenia, plany i pomysły domyślnie zapisywane w odpowiednich notatkach w `sejf/`.
+* **Zakaz zmyślania:** Bezwzględny zakaz halucynowania nieomówionych faktów. W razie wątpliwości: asystent pyta wprost.
+* **Higiena grafu i Pulpit:** [[Pulpit]] łączy się wyłącznie z głównymi hubami kategorii (podfolderami). Żadne notatki szczegółowe ani podrzędne nie linkują bezpośrednio do Pulpitu, aby zachować przejrzysty widok grafu.
+* **Priorytety zadań:** Zadania mają przejrzyste statusy (🔴 Pilne, 🟡 W trakcie, 🟢 Do zrobienia).
+* **Bezpieczeństwo danych:** Agent nie usuwa notatek bez wyraźnego polecenia użytkownika (zamiast tego oznacza je jako archiwalne lub zrobione).
 
 ---
 

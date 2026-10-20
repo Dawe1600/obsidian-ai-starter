@@ -5,7 +5,7 @@ description: Standardy tworzenia, linkowania i zarządzania notatkami w sejfie O
 
 # 📚 Skill: Obsidian Manager
 
-Ta umiejętność definiuje najlepsze praktyki formatowania, strukturyzowania oraz linkowania wiedzy w sejfie Obsidian (`sejf/`).
+Ta umiejętność definiuje standardy formatowania, strukturyzowania oraz linkowania wiedzy w sejfie Obsidian (`sejf/`).
 
 ---
 
@@ -17,17 +17,38 @@ Każda nowo tworzona notatka musi być powiązana z istniejącą siatką wiedzy:
 
 ---
 
-## 2. Standardy Wizualne i Callouts
-Stosuj bloki wyróżnień (Callouts) zgodne z Obsidianem:
-* `> [!NOTE]` — Ważny kontekst, tło sprawy.
-* `> [!TIP]` — Porada, trik, szybsze rozwiązanie.
-* `> [!IMPORTANT]` — Kluczowe ustalenie, krytyczny punkt.
-* `> [!WARNING]` — Uwaga na błędy, ryzyko, niesprawdzone procedury.
+## 2. Higiena Grafu i Reguła Pulpitu
+Wizualizacja grafu w Obsidianie to potężne narzędzie pod warunkiem zachowania hierarchii:
+* **Pulpit jako jedyny punkt wejścia**: `[[Pulpit]]` linkuje wyłącznie do głównych hubów kategorii (przeglądów folderów).
+* **Zakaz linkowania z powrotem do Pulpitu**: Żadne notatki szczegółowe, projekty, procedury ani notatki dzienne (`Daily Notes`) nie mogą linkować do `[[Pulpit]]`. Pozwala to uniknąć efektu zaśmieconej gwiazdy w widoku grafu.
+* Notatki łączą się horyzontalnie między sobą (np. projekt łączy się z bazą wiedzy i zadaniem).
 
 ---
 
-## 3. Struktura Nowych Notatek w Bazie Wiedzy
-Gdy tworzysz nową procedurę lub opis problemu w `sejf/Baza Wiedzy/`, stosuj szablon:
+## 3. Zapis Ustaleń i Zakaz Zmyślania
+* **Domyślny zapis w sejfie**: Wszystkie ustalenia, plany projektowe, architektura i decyzje wypracowane w rozmowie powinny domyślnie trafiać do odpowiednich notatek w `sejf/`.
+* **Zakaz halucynacji**: Bezwzględny zakaz wymyślania nieomówionych faktów, zadań czy dat.
+* **Pytaj przy wątpliwościach**: Jeśli nie jest jasne, do której kategorii przypisać notatkę lub intencja użytkownika jest niejednoznaczna, zapytaj wprost.
+
+---
+
+## 4. Standardy Wizualne i Callouts
+Stosuj bloki wyróżnień (Callouts) zgodne z Obsidianem:
+* `> [!NOTE]`: Ważny kontekst, tło sprawy.
+* `> [!TIP]`: Porada, trik, szybsze rozwiązanie.
+* `> [!IMPORTANT]`: Kluczowe ustalenie, krytyczny punkt.
+* `> [!WARNING]`: Uwaga na błędy, ryzyko, niesprawdzone procedury.
+
+---
+
+## 5. Czysta Typografia
+* **Brak m-dashów**: Unikaj znaków pauzy ('—') oraz półpauzy ('–'). Stosuj wyłącznie standardowy łącznik '-' lub dwukropek ':'.
+* **Tagi**: Dodawaj spójne tagi na końcu notatek (np. `#projekt`, `#zadanie`, `#procedura`, `#wiedza`).
+
+---
+
+## 6. Struktura Nowych Notatek w Bazie Wiedzy
+Gdy tworzysz nową procedurę lub opis problemu w `sejf/Baza Wiedzy/`, stosuj schemat:
 ```markdown
 # 🛠️ [Nazwa Zagadnienia / Procedury]
 
@@ -43,12 +64,15 @@ Gdy tworzysz nową procedurę lub opis problemu w `sejf/Baza Wiedzy/`, stosuj sz
 1. 
 
 ## 🔗 Powiązania
-* Projekt: [[Projekty/...]]
-* Tagi: #wiedza #procedura
+* Powiązany projekt: [[Projekty/...]]
+* Zadania: [[Zadania/Zadania|Zadania]]
+
+---
+#wiedza #procedura
 ```
 
 ---
 
-## 4. Zasada Czystości
+## 7. Szacunek dla Struktury
 * Nigdy nie twórz tymczasowych notatek roboczych bezpośrednio w głównym katalogu `sejf/`.
 * Jeśli notatka nie pasuje do istniejących folderów, spytaj użytkownika lub zapisz ją w `sejf/Baza Wiedzy/`.

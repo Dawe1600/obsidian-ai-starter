@@ -13,7 +13,7 @@
 ---
 
 ## 🟡 W trakcie
-- [ ] Skonfigurować własne skróty i preferencje w [[Pulpit|Pulpicie]]
+- [ ] Skonfigurować własne skróty i preferencje na Pulpicie
 - [ ] Dodać pierwszy własny projekt w folderze [[Projekty/Przykładowy Projekt|Projekty]]
 
 ---

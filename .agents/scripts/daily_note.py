@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-daily_note.py — Generator notatki dziennej z synchronizacją zadań.
+daily_note.py - Generator notatki dziennej z synchronizacją zadań.
 Używa wyłącznie wbudowanej biblioteki standardowej Pythona 3 (zero zewnętrznych zależności).
 """
 
@@ -81,7 +81,7 @@ def generuj_notatke():
     szablon = f"""# 📅 {ladna_data}
 
 > [!NOTE] Podsumowanie Dnia
-> Notatka dzienna wygenerowana automatycznie. Link do centralnego [[Pulpit|Pulpitu]].
+> Notatka dzienna wygenerowana automatycznie.
 
 ---
 

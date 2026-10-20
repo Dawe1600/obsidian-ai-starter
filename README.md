@@ -21,10 +21,11 @@ WORKSPACE/
 │   ├── SOUL.md                   # Tożsamość, charakter i styl asystenta
 │   ├── AGENTS.md                 # Kodeks i zasady postępowania agenta
 │   ├── MEMORY.md                 # Pamięć długoterminowa asystenta
+│   ├── ONBOARDING.md             # Kreator pierwszego uruchomienia (usuwany automatycznie po konfiguracji)
 │   ├── scripts/                  # Automatyzacje i skrypty w Pythonie
 │   │   └── daily_note.py         # Generator notatki dziennej i zadań
 │   └── skills/                   # Specjalistyczne umiejętności agenta
-│       └── obsidian-manager/     # Standardy formatowania i wikilinków
+│       └── obsidian-manager/     # Standardy formatowania, higiena grafu i wikilinki
 │           └── SKILL.md
 │
 ├── sejf/                         <-- 📓 Czysty Sejf Obsidian (Twoje Dane)
@@ -40,9 +41,11 @@ WORKSPACE/
 
 ### Dlaczego taki podział?
 1. **Czystość w Obsidianie:** W aplikacji Obsidian otwierasz wyłącznie podfolder `sejf/`. Twój graf powiązań i drzewo plików są wolne od technicznych skryptów, logów i reguł.
-2. **Pełna sprawczość agenta:** Otwierając katalog główny (`WORKSPACE`) w środowisku agencyjnym, agent widzi zarówno Twoje notatki w `sejf/`, jak i swoje instrukcje w `.agents/`.
-3. **Pamięć na Twoim dysku:** Koniec z zamykaniem wiedzy w chmurze korporacji. Twoja pamięć AI żyje w pliku `MEMORY.md`, który możesz wersjonować w Git.
-4. **Osobowość skrojona na miarę:** W pliku `SOUL.md` asystent przechowuje swój charakter, ton głosu i model relacji z Tobą.
+2. **Higiena grafu wiedzy:** Zastosowano regułę czystego grafu: `Pulpit` łączy się wyłącznie z hubami kategorii, a notatki podrzędne nie zaśmiecają widoku grafu linkami zwrotnymi do pulpitu.
+3. **Pełna sprawczość agenta:** Otwierając katalog główny (`WORKSPACE`) w środowisku agencyjnym, agent widzi zarówno Twoje notatki w `sejf/`, jak i swoje instrukcje w `.agents/`.
+4. **Domyślny zapis bez halucynacji:** Asystent automatycznie rejestruje ustalenia, plany i decyzje w sejfie, a w razie wątpliwości pyta zamiast zmyślać nieomówione fakty.
+5. **Pamięć na Twoim dysku:** Koniec z zamykaniem wiedzy w chmurze korporacji. Twoja pamięć AI żyje w pliku `MEMORY.md`, który możesz wersjonować w Git.
+6. **Osobowość skrojona na miarę:** W pliku `SOUL.md` asystent przechowuje swój charakter, ton głosu i model relacji z Tobą.
 
 ---
 
@@ -53,7 +56,7 @@ WORKSPACE/
   ```bash
   git clone https://github.com/Dawe1600/obsidian-ai-starter.git
   ```
-* **Opcja B (Bez Gita — ZIP):** Jeśli nie masz zainstalowanego Gita, kliknij zielony przycisk **`<> Code`** na samej górze tej strony na GitHubie, wybierz **Download ZIP** i rozpakuj archiwum w wybranym miejscu na dysku.
+* **Opcja B (Bez Gita: ZIP):** Jeśli nie masz zainstalowanego Gita, kliknij zielony przycisk **`<> Code`** na samej górze tej strony na GitHubie, wybierz **Download ZIP** i rozpakuj archiwum w wybranym miejscu na dysku.
 
 ### Krok 2: Otwórz Workspace i Skonfiguruj Asystenta
 1. Uruchom swoje narzędzie agencyjne (np. **Antigravity**, **Cursor**, **Claude Code**, **Cline**, **Windsurf** itp.).
@@ -72,7 +75,7 @@ WORKSPACE/
 ## ⚙️ Wbudowane Skrypty
 
 W folderze `.agents/scripts/` znajduje się gotowy skrypt w czystym standardowym Pythonie 3 (zero zewnętrznych instalacji `pip`):
-* `daily_note.py` — automatycznie tworzy nową notatkę dzienną w `sejf/Daily Notes/YYYY-MM-DD.md` i zaciąga aktywne zadania z pliku `sejf/Zadania/Zadania.md`.
+* `daily_note.py`: automatycznie tworzy nową notatkę dzienną w `sejf/Daily Notes/YYYY-MM-DD.md` i zaciąga aktywne zadania z pliku `sejf/Zadania/Zadania.md`.
 
 Uruchomienie w terminalu:
 ```bash
@@ -80,7 +83,7 @@ python .agents/scripts/daily_note.py
 ```
 
 > [!TIP] Brak Pythona na komputerze? Żaden problem!
-> Skrypt Pythona to tylko opcjonalne ułatwienie. Twój asystent AI potrafi wykonać dokładnie to samo bezpośrednio w oknie czatu — wystarczy napisać: *„Wygeneruj moją notatkę na dziś”*, a agent utworzy plik sam, bez potrzeby instalowania czegokolwiek.
+> Skrypt Pythona to tylko opcjonalne ułatwienie. Twój asystent AI potrafi wykonać dokładnie to samo bezpośrednio w oknie czatu: wystarczy napisać: *„Wygeneruj moją notatkę na dziś”*, a agent utworzy plik sam, bez potrzeby instalowania czegokolwiek.
 
 ---
 

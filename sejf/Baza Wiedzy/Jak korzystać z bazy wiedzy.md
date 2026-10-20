@@ -14,19 +14,20 @@ Folder `Baza Wiedzy/` to Twoje prywatne kompendium:
 ---
 
 ## 🤖 Rola Agenta AI w Bazie Wiedzy
-Nie musisz ręcznie pisać pięknych elaboratów. Możesz po prostu rzucić agentowi:
+Nie musisz ręcznie pisać rozbudowanych dokumentów. Możesz po prostu rzucić agentowi:
 > *„Rozwiązałem dziś problem z zawieszającym się skryptem X. Przyczyną był zły timeout. Zapisz to do bazy wiedzy jako krótką procedurę i dodaj tagi.”*
 
 Agent:
 1. Stworzy nowy plik `.md` we właściwym formacie.
 2. Doda callouty z ostrzeżeniem.
-3. Wstawi linki do powiązanych projektów.
+3. Wstawi linki do powiązanych projektów lub tematów.
 
 ---
 
-## 🔗 Przykładowe Powiązania
-* Wróć do: [[Pulpit]]
-* Zobacz zadania: [[Zadania/Zadania]]
+## 🕸️ Higiena Grafu
+Zgodnie z regułą czystego grafu:
+* Notatki w Bazie Wiedzy linkują bezpośrednio do powiązanych projektów, procedur i zadań (np. `[[Projekty/Przykładowy Projekt|Przykładowy Projekt]]`, `[[Zadania/Zadania|Zadania]]`).
+* Notatki podrzędne **nie linkują bezpośrednio do Pulpitu**, dzięki czemu widok grafu w Obsidianie pozostaje czytelny i uporządkowany.
 
 ---
 #wiedza #instrukcja #baza-wiedzy
