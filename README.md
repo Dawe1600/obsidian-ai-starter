@@ -107,7 +107,10 @@ flowchart TD
   ```bash
   git clone https://github.com/Dawe1600/obsidian-ai-starter.git
   ```
-* **Opcja B (Bez Gita: ZIP):** Jeśli nie masz zainstalowanego Gita, kliknij zielony przycisk **`<> Code`** na samej górze tej strony na GitHubie, wybierz **Download ZIP** i rozpakuj archiwum w wybranym miejscu na dysku.
+* **Opcja B (Bez Gita: ZIP):** Pobierz najnowszą paczkę z zakładki [Releases](https://github.com/Dawe1600/obsidian-ai-starter/releases) lub kliknij zielony przycisk **`<> Code`** -> **Download ZIP** na samej górze strony i rozpakuj archiwum w wybranym miejscu na dysku.
+
+> [!TIP] Samoczyszczący instalator
+> Nie musisz ręcznie usuwać grafik demonstracyjnych ani plików konfiguracyjnych. Po przeprowadzeniu wywiadu w Kroku 2, asystent AI automatycznie usunie zbędne materiały (`assets/`, `ONBOARDING.md`), pozostawiając idealnie czysty sejf.
 
 ### Krok 2: Otwórz Workspace i Skonfiguruj Asystenta
 1. Uruchom swoje narzędzie agencyjne (np. **Antigravity**, **Cursor**, **Claude Code**, **Cline**, **Windsurf** itp.).

@@ -48,7 +48,8 @@ Po uzyskaniu odpowiedzi na Krok 3 wykonaj natychmiast następujące czynności:
    Uzupełnij profil użytkownika, cele, preferencje i wpisz wpis startowy w Historii Zmian Pamięci.
 5. **Dostosuj `.agents/AGENTS.md`:**
    Zaktualizuj sekcję „Mapa Katalogów” do nowej struktury folderów oraz usuń sekcję „Pierwsze Uruchomienie (Kreator Sejfu)”.
-6. **Usuń ten plik (`.agents/ONBOARDING.md`):**
-   Kreator spełnił swoje zadanie: usuń fizycznie plik `ONBOARDING.md`, aby nie zaśmiecał katalogu `.agents/`.
+6. **Posprzątaj zbędne pliki demonstracyjne:**
+   - Usuń plik `.agents/ONBOARDING.md` (kreator spełnił swoje zadanie).
+   - Usuń folder `assets/` (zawierał wyłącznie grafiki demonstracyjne do podglądu repozytorium na GitHubie, niepotrzebne w Twoim prywatnym sejfie).
 7. **Przywitaj użytkownika w nowej roli:**
    Potwierdź, że konfiguracja zakończyła się sukcesem i sejf jest w 100% gotowy do pracy!
