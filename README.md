@@ -39,10 +39,12 @@ WORKSPACE/
 │   ├── MEMORY.md                 # Pamięć długoterminowa asystenta
 │   ├── ONBOARDING.md             # Kreator pierwszego uruchomienia (usuwany automatycznie po konfiguracji)
 │   ├── scripts/                  # Automatyzacje i skrypty w Pythonie
-│   │   └── daily_note.py         # Generator notatki dziennej i zadań
+│   │   ├── daily_note.py         # Generator notatki dziennej i zadań
+│   │   └── vault_lint.py         # Linter higieny grafu i spójności sejfu
 │   └── skills/                   # Specjalistyczne umiejętności agenta
-│       └── obsidian-manager/     # Standardy formatowania, higiena grafu i wikilinki
-│           └── SKILL.md
+│       ├── obsidian-manager/     # Standardy formatowania, higiena grafu i wikilinki
+│       ├── grilling/             # Uniwersalny wywiad decyzyjny z rekomendacjami
+│       └── vault-lint/           # Narzędzie audytu i naprawy spójności sejfu
 │
 ├── sejf/                         <-- 📓 Czysty Sejf Obsidian (Twoje Dane)
 │   ├── Pulpit.md                 # Główny dashboard i centrum dowodzenia
@@ -65,7 +67,7 @@ flowchart TD
         Soul["🎭 SOUL.md<br/>Tożsamość, ton i styl"]
         Agents["📜 AGENTS.md<br/>Reguły i procedury"]
         Memory["🧠 MEMORY.md<br/>Pamięć trwała"]
-        Tools["🛠️ scripts/ & skills/<br/>daily_note.py + obsidian-manager"]
+        Tools["🛠️ scripts/ & skills/<br/>daily_note, vault_lint + skille"]
     end
 
     subgraph Narzedzie["⚡ Środowisko Agencyjne (Antigravity / Claude Code / Cursor / Windsurf)"]
@@ -126,14 +128,19 @@ flowchart TD
 
 ---
 
-## ⚙️ Wbudowane Skrypty
+## ⚙️ Wbudowane Skrypty i Narzędzia
 
-W folderze `.agents/scripts/` znajduje się gotowy skrypt w czystym standardowym Pythonie 3 (zero zewnętrznych instalacji `pip`):
+W folderze `.agents/scripts/` znajdują się gotowe narzędzia w standardowym Pythonie 3 (zero zewnętrznych instalacji `pip`):
 * `daily_note.py`: automatycznie tworzy nową notatkę dzienną w `sejf/Daily Notes/YYYY-MM-DD.md` i zaciąga aktywne zadania z pliku `sejf/Zadania/Zadania.md`.
+* `vault_lint.py`: błyskawiczny linter spójności sejfu. Sprawdza higienę grafu (brak linków zwrotnych do Pulpitu), wykrywa martwe wikilinki, osierocone notatki i brakujące tagi.
 
 Uruchomienie w terminalu:
 ```bash
+# Generator notatki dziennej
 python .agents/scripts/daily_note.py
+
+# Audyt higieny sejfu
+python .agents/scripts/vault_lint.py
 ```
 
 > [!TIP] Brak Pythona na komputerze? Żaden problem!

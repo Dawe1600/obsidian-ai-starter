@@ -9,7 +9,7 @@
 ## 🎭 Tożsamość i Styl (`.agents/SOUL.md`)
 * Zawsze stosuj się do stylu, tonu głosu i relacji określonej w pliku `.agents/SOUL.md`.
 * Styl: bezpośredni, zwięzły, konkretny, od razu do rzeczy, bez zbędnych przedłużaczy.
-* Zasada bezwzględna: zero m-dashów ('—' oraz '–'). Stosuj wyłącznie zwykłe łączniki '-' lub dwukropki ':'.
+* Zasada bezwzględna: zero pauz i półpauz (zakaz znaków m-dash i en-dash). Stosuj wyłącznie zwykłe łączniki '-' lub dwukropki ':'.
 
 ---
 
@@ -31,8 +31,8 @@
   * `AGENTS.md`: Te zasady.
   * `MEMORY.md`: Twoja trwała pamięć.
   * `ONBOARDING.md`: Kreator początkowej konfiguracji.
-  * `scripts/`: Skrypty pomocnicze (np. generator daily notes).
-  * `skills/`: Dodatkowe umiejętności i standardy (`obsidian-manager`).
+  * `scripts/`: Skrypty pomocnicze (`daily_note.py`, `vault_lint.py`).
+  * `skills/`: Umiejętności agenta (`obsidian-manager`, `grilling`, `vault-lint`).
 
 ---
 
@@ -50,23 +50,29 @@
 * **Zakaz zmyślania:** Bezwzględny zakaz halucynowania nieomówionych faktów, zadań czy dat.
 * **Wątpliwości:** Jeśli pojawią się wątpliwości, do której notatki przypisać daną treść: zapytaj użytkownika wprost.
 
-### 4. ✍️ Obsidian Callouts
+### 4. 🎯 Obowiązkowy Standard Grillingu (Skill `grilling`)
+* **Uruchamiaj ZAWSZE, gdy brakuje informacji:** Zamiast zadawać chaotyczne, pojedyncze pytania lub zgadywać na ślepo, zawsze uruchamiaj procedurę wywiadu (`grilling`).
+* **Bramka decyzyjna:** Obowiązuje przy każdym nowym projekcie, procedurze bazy wiedzy, niejednoznacznym poleceniu lub dylemacie architektonicznym.
+* **Format:** Zadaj rundę 2-4 pytań z gotowymi rekomendacjami (`➡️ Rekomendacja`), sformułowanymi tak, by słowo "tak" zatwierdzało Twój wybór.
+* **Samodzielny audyt faktów:** Nie pytaj o nic, co możesz sprawdzić w plikach sejfu lub kodzie. Pytaj wyłącznie o decyzje, preferencje i brakujące wytyczne biznesowe.
+
+### 5. ✍️ Obsidian Callouts
 * Wyróżniaj kluczowe informacje za pomocą bloków callout:
   * `> [!NOTE]`: Kontekst, informacje ogólne.
   * `> [!TIP]`: Wskazówki, dobre praktyki, skróty.
   * `> [!IMPORTANT]`: Ważne wymagania, krytyczne ustalenia.
   * `> [!WARNING]`: Ostrzeżenia, ryzyka.
 
-### 5. 🏷️ Tagi
+### 6. 🏷️ Tagi
 * Dodawaj spójne tagi tematyczne na końcu notatek (np. `#projekt`, `#zadanie`, `#procedura`, `#wiedza`).
 
-### 6. 🛡️ Szacunek dla struktury
+### 7. 🛡️ Szacunek dla struktury
 * Nie twórz przypadkowych plików w katalogu głównym sejfu. Nowe pliki zawsze lokuj we właściwych podfolderach.
 
 ---
 
 ## 🐍 Obsługa Skryptów i Brak Pythona (Zasada Fallbacku)
-* **Natywna sprawczość:** Skrypt `.agents/scripts/daily_note.py` to opcjonalne narzędzie pomocnicze. Jeśli użytkownik prosi o utworzenie notatki dziennej lub podsumowanie zadań, a Python nie jest zainstalowany: **zawsze wykonaj operację bezpośrednio na plikach Markdown** (samodzielnie odczytaj aktywne zadania z `sejf/Zadania/Zadania.md` i zapisz plik w `sejf/Daily Notes/YYYY-MM-DD.md`).
+* **Natywna sprawczość:** Skrypty pomocnicze w `.agents/scripts/` (`daily_note.py`, `vault_lint.py`) to opcjonalne narzędzia przyspieszające pracę. Jeśli Python nie jest zainstalowany: **zawsze wykonaj operację bezpośrednio na plikach Markdown w `sejf/`** (ręczne odczytanie/zapisanie zadań lub ręczny audyt linków i struktury).
 * **Brak Pythona nigdy nie blokuje pracy:** Zrealizuj zadanie bezpośrednio w sejfie.
 * **Pomoc w instalacji:** Jeśli użytkownik zapyta o instalację Pythona:
   * Windows (PowerShell): `winget install Python.Python.3.12`
