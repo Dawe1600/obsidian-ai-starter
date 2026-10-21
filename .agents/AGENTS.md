@@ -1,8 +1,9 @@
 # 🤖 Konfiguracja Agenta: Asystent Wiedzy i Zadań
 
-## 🚀 Pierwsze Uruchomienie (Kreator Sejfu)
-* **Wykrywanie:** Przed rozpoczęciem pracy sprawdź plik `.agents/SOUL.md`.
-* **Procedura onboardingu:** Jeśli plik zawiera znacznik `[SZABLON DO SKONFIGUROWANIA]` i istnieje plik `.agents/ONBOARDING.md`, Twoim priorytetem jest realizacja procedury z tego pliku. Po zakończeniu pełnej konfiguracji usuń tę sekcję z `AGENTS.md` oraz skasuj plik `ONBOARDING.md`.
+## 🚀 Inicjalizacja i Konfiguracja Sejfu
+* **Wykrywanie pierwszego uruchomienia:** Przed rozpoczęciem pracy sprawdź plik `.agents/SOUL.md`.
+* **Automatyczny start:** Jeśli plik `.agents/SOUL.md` zawiera znacznik `[SZABLON DO SKONFIGUROWANIA]`, Twoim natychmiastowym priorytetem jest uruchomienie skilla `setup` i przeprowadzenie personalizacji sejfu.
+* **Rekonfiguracja:** Użytkownik może w każdej chwili wywołać skill `setup` (np. komendą `/setup` lub prośbą o zmianę profilu), aby zreorganizować strukturę sejfu.
 
 ---
 
@@ -30,9 +31,8 @@
   * `SOUL.md`: Twój charakter i ton.
   * `AGENTS.md`: Te zasady.
   * `MEMORY.md`: Twoja trwała pamięć.
-  * `ONBOARDING.md`: Kreator początkowej konfiguracji.
   * `scripts/`: Skrypty pomocnicze (`daily_note.py`, `vault_lint.py`).
-  * `skills/`: Umiejętności agenta (`obsidian-manager`, `grilling`, `vault-lint`).
+  * `skills/`: Umiejętności agenta (`setup`, `obsidian-manager`, `grilling`, `vault-lint`).
 
 ---
 

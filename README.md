@@ -37,11 +37,11 @@ WORKSPACE/
 │   ├── SOUL.md                   # Tożsamość, charakter i styl asystenta
 │   ├── AGENTS.md                 # Kodeks i zasady postępowania agenta
 │   ├── MEMORY.md                 # Pamięć długoterminowa asystenta
-│   ├── ONBOARDING.md             # Kreator pierwszego uruchomienia (usuwany automatycznie po konfiguracji)
 │   ├── scripts/                  # Automatyzacje i skrypty w Pythonie
 │   │   ├── daily_note.py         # Generator notatki dziennej i zadań
 │   │   └── vault_lint.py         # Linter higieny grafu i spójności sejfu
 │   └── skills/                   # Specjalistyczne umiejętności agenta
+│       ├── setup/                # Kreator pierwszego uruchomienia i rekonfiguracji
 │       ├── obsidian-manager/     # Standardy formatowania, higiena grafu i wikilinki
 │       ├── grilling/             # Uniwersalny wywiad decyzyjny z rekomendacjami
 │       └── vault-lint/           # Narzędzie audytu i naprawy spójności sejfu
@@ -111,15 +111,15 @@ flowchart TD
   ```
 * **Opcja B (Bez Gita: ZIP):** Pobierz najnowszą paczkę z zakładki [Releases](https://github.com/Dawe1600/obsidian-ai-starter/releases) lub kliknij zielony przycisk **`<> Code`** -> **Download ZIP** na samej górze strony i rozpakuj archiwum w wybranym miejscu na dysku.
 
-> [!TIP] Samoczyszczący instalator
-> Nie musisz ręcznie usuwać grafik demonstracyjnych ani plików konfiguracyjnych. Po przeprowadzeniu wywiadu w Kroku 2, asystent AI automatycznie usunie zbędne materiały (`assets/`, `ONBOARDING.md`), pozostawiając idealnie czysty sejf.
+> [!TIP] Samoczyszczące środowisko
+> Nie musisz ręcznie usuwać grafik demonstracyjnych. Po przeprowadzeniu konfiguracji w Kroku 2, asystent AI automatycznie usunie zbędne materiały demonstracyjne (`assets/`), pozostawiając idealnie czysty sejf.
 
 ### Krok 2: Otwórz Workspace i Skonfiguruj Asystenta
 1. Uruchom swoje narzędzie agencyjne (np. **Antigravity**, **Cursor**, **Claude Code**, **Cline**, **Windsurf** itp.).
 2. Jako katalog roboczy (Workspace) otwórz **główny folder projektu** (ten zawierający zarówno `.agents/`, jak i `sejf/`).
 3. Wybierz swój preferowany model (np. Claude, Gemini, GPT lub model lokalny).
 4. Napisz dowolną pierwszą wiadomość (np. *„Cześć, zacznijmy!”*).
-   * Agent automatycznie wykryje pierwsze uruchomienie, przeprowadzi krótki wywiad w 3 krokach i sam zbuduje strukturę sejfu oraz skonfiguruje pliki `SOUL.md`, `AGENTS.md` i `MEMORY.md`.
+   * Agent automatycznie wykryje pierwsze uruchomienie, uruchomi wbudowany skill `setup`, przeprowadzi krótki wywiad w 3 krokach i sam zbuduje strukturę sejfu oraz skonfiguruje pliki `SOUL.md` i `MEMORY.md`.
 
 ### Krok 3: Otwórz Sejf w Obsidianie
 1. Uruchom program **Obsidian**.
